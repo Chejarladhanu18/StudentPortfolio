@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Student Portfolio</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Dhanalakshmi</h1>
+
+<h3>Python Developer | AWS Learner | Machine Learning Enthusiast</h3>
+
+<hr>
+
+<h2>About Me</h2>
+
+<p>
+I am an Electronics and Communication Engineering graduate with a CGPA of 8.82.
+I am passionate about Python, AWS, Machine Learning and Full Stack Development.
+</p>
+
+<hr>
+
+<h2>Skills</h2>
+
+<ul>
+
+<li>Python</li>
+<li>Flask</li>
+<li>AWS EC2</li>
+<li>Machine Learning</li>
+<li>SQL</li>
+<li>Git</li>
+
+</ul>
+
+<hr>
+
+<h2>Projects</h2>
+
+<ul>
+
+<li>Student Portfolio Website</li>
+<li>Heart Monitoring System</li>
+<li>Automatic Vehicle Speed Control</li>
+
+</ul>
+
+<hr>
+
+<h2>Contact Me</h2>
+
+<form action="/comment" method="POST">
+
+<label>Name</label><br>
+<input type="text" name="name" required><br><br>
+
+<label>Email</label><br>
+<input type="email" name="email" required><br><br>
+
+<label>Comment</label><br>
+<textarea name="comment" rows="5" required></textarea><br><br>
+
+<button type="submit">Submit</button>
+
+</form>
+
+</div>
+
+</body>
+
+</html>
