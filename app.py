@@ -19,4 +19,4 @@ def comment():
     return "<h2>Thank You! Your comment has been saved.</h2><br><a href='/'>Go Back</a>"
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(host="0.0.0.0", port=5000, debug=True)
