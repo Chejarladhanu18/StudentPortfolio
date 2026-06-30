@@ -1,37 +1,25 @@
 import mysql.connector
 
 def get_connection():
-
     connection = mysql.connector.connect(
-
         host="localhost",
-
         user="root",
-
         password="root123",
-
         database="portfolio_db"
-
     )
-
     return connection
 
-
-def save_comment(name,email,comment):
-
+def save_comment(comment):
     conn = get_connection()
-
     cursor = conn.cursor()
 
     query = """
-    INSERT INTO comments(name,email,comment)
-    VALUES(%s,%s,%s)
+    INSERT INTO comments(comment)
+    VALUES(%s)
     """
 
-    cursor.execute(query,(name,email,comment))
-
+    cursor.execute(query, (comment,))
     conn.commit()
 
     cursor.close()
-
     conn.close()

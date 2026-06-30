@@ -1,79 +1,166 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-
-    <title>Student Portfolio</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dhanalakshmi | Portfolio</title>
 
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-
 </head>
 
 <body>
 
-<div class="container">
+<div class="main-container">
 
-<h1>Dhanalakshmi</h1>
+    <!-- Navigation -->
+    <nav>
 
-<h3>Python Developer | AWS Learner | Machine Learning Enthusiast</h3>
+        <div class="logo">
+            &lt;Dhanu/&gt;
+        </div>
 
-<hr>
+        <ul>
 
-<h2>About Me</h2>
+            <li><a href="#home">Home</a></li>
 
-<p>
-I am an Electronics and Communication Engineering graduate with a CGPA of 8.82.
-I am passionate about Python, AWS, Machine Learning and Full Stack Development.
-</p>
+            <li><a href="#about">About</a></li>
 
-<hr>
+            <li><a href="#portfolio">Portfolio</a></li>
 
-<h2>Skills</h2>
+            <li><a href="#contact">Contact</a></li>
 
-<ul>
+        </ul>
 
-<li>Python</li>
-<li>Flask</li>
-<li>AWS EC2</li>
-<li>Machine Learning</li>
-<li>SQL</li>
-<li>Git</li>
+        <a href="#contact" class="talk-btn">
+            Let's Talk
+        </a>
 
-</ul>
+    </nav>
 
-<hr>
 
-<h2>Projects</h2>
+    <!-- Hero Section -->
 
-<ul>
+    <section class="hero" id="home">
 
-<li>Student Portfolio Website</li>
-<li>Heart Monitoring System</li>
-<li>Automatic Vehicle Speed Control</li>
+        <div class="left">
 
-</ul>
+            <h3>Hello, I'm</h3>
 
-<hr>
+            <h1>Dhanalakshmi</h1>
 
-<h2>Contact Me</h2>
+            <h2>PYTHON <span>DEVELOPER</span></h2>
 
-<form action="/comment" method="POST">
+            <p>
+                Python Developer | AWS Learner | Machine Learning Enthusiast
+            </p>
 
-<label>Name</label><br>
-<input type="text" name="name" required><br><br>
+            <div class="buttons">
 
-<label>Email</label><br>
-<input type="email" name="email" required><br><br>
+                <a href="#portfolio" class="btn1">
+                    Projects
+                </a>
 
-<label>Comment</label><br>
-<textarea name="comment" rows="5" required></textarea><br><br>
+                <a href="#contact" class="btn2">
+                    Let's Talk
+                </a>
 
-<button type="submit">Submit</button>
+            </div>
 
-</form>
+        </div>
+
+
+        <div class="right">
+
+            <img src="{{ url_for('static', filename='developer.png') }}" alt="Developer">
+
+        </div>
+
+    </section>
 
 </div>
 
-</body>
 
+<!-- ABOUT -->
+
+<section class="about" id="about">
+
+    <h2>About Me</h2>
+
+    <p>
+        I am an Electronics and Communication Engineering graduate with a CGPA of 8.82. I am passionate about Python,
+        AWS, Machine Learning and Full Stack Development. I enjoy building modern web applications using Flask and
+        MySQL.
+    </p>
+
+</section>
+
+
+<!-- PORTFOLIO -->
+
+<section class="portfolio" id="portfolio">
+
+    <h2>Portfolio</h2>
+
+    <div class="cards">
+
+        <div class="card">
+            <h3>Skills</h3>
+
+            <ul>
+
+                <li>Python</li>
+                <li>Flask</li>
+                <li>MySQL</li>
+                <li>AWS EC2</li>
+                <li>Git & GitHub</li>
+
+            </ul>
+
+        </div>
+
+        <div class="card">
+
+            <h3>Projects</h3>
+
+            <ul>
+
+                <li>Student Portfolio Website</li>
+                <li>Heart Monitoring System</li>
+                <li>Vehicle Speed Control</li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- CONTACT -->
+
+<section class="contact" id="contact">
+
+    <h2>Let's Talk</h2>
+
+    <form action="/comment" method="POST">
+
+        <textarea
+            name="comment"
+            placeholder="Write your message..."
+            required>
+        </textarea>
+
+        <button type="submit">
+
+            Submit
+
+        </button>
+
+    </form>
+
+</section>
+
+</body>
 </html>
